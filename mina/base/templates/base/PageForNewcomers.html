@@ -1,0 +1,151 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+ <div class="firstSection">
+     <div class="leftNew">
+         <h1>Learn Japanese by building your word bank before your very eyes</h1>
+        <button> <a href="{% url 'register' %}"> Get Started</a></button>
+
+     </div>
+
+     <div class="rightNew"></div>
+
+ </div>
+
+ <div class="secondSection">
+    <div class="homeSecond">
+
+        <div class="top">
+            <h1 class="paragraphTitles">CATALOGUE YOUR WORDS:</h1>
+            
+        </div>
+    
+    
+       <div class="grid-container">
+      
+      <div class="grid-item">
+          <img src="../../assets/IMG_1558.png"  class="grid1" alt="">
+          <p>Books</p>
+        </div>
+      <div class="grid-item">
+          <img src="../../assets/IMG_1783.png"  class="grid1" alt="">
+          <p>Social Media</p>
+          </div>
+      <div class="grid-item">
+          <img src="../../assets/IMG_2899.png"  class="grid1" alt="">
+          <p>Movies</p>
+          </div>
+      <div class="grid-item">
+          <img src="../../assets/IMG_2907.png"  class="grid1" alt="">
+          <p>Anime/TV</p>
+          </div>
+      <div class="grid-item">
+          <img src="../../assets/IMG_2908.png"  class="grid1" alt="">
+          <p>Music</p>
+          </div>
+      <div class="grid-item">
+          <img src="../../assets/IMG_2909.png"  class="grid1" alt="">
+          <p>Photos</p>
+          </div>
+          
+        
+        </div>
+ </div>
+
+ <div class="thirdSection">
+     <div class="left">
+         <h1>Don't let your words dissapear once you hear them.</h1>
+         
+     </div>
+ </div>
+
+ <div class="footer">
+     <h1>Learn Japanese with Mina</h1>
+     <br>
+     <button>Start Now</button>
+ </div>
+
+
+ <style>
+     a{
+        text-decoration: inherit;
+     }
+     .homeSecond{
+        padding: 100px 100px 100px 100px;
+     }
+     .firstSection{
+         height: 700px;
+         background-repeat: no-repeat;
+         display: flex;
+         font-size: 30px;
+         
+        
+        
+     }
+     .leftNew{
+        height:500px;
+         width:700px;
+         padding: 100px 20px 20px 100px;
+     }
+     .rightNew{
+         height:500px;
+         width:500px;
+         padding: 20px 20px 20px 20px;
+     }
+     .homeSecond{
+         background-color:cornflowerblue;
+         height:800px;
+         width:100%;
+         margin: 0 auto;
+     }
+     .footer{
+         bottom:0px;
+         height:120px;
+         background-color: rgb(181, 198, 255);
+         text-align: center;
+         padding-top:10px;
+     }
+     .thirdSection{
+        width: 100%;
+        height: 500px;
+        padding: 100px 20px 20px 100px;
+         margin-bottom: 50px;
+     }
+     .divOption{
+    width:200px;
+    height:200px;
+    margin-right: 20px;
+    background-color: blue;
+}
+.catalogueChoices{
+    display:flex;
+}
+.grid-container{
+    
+        background-image: repeating-radial-gradient(to bottom left, blue to green);
+        width: 100%;
+        height: 80%;
+       display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 auto;
+  grid-gap: 10px;
+    }
+    .grid-item{
+      background-color: white;
+      padding: 10px;
+      
+      
+      
+    }
+    
+    button{
+        height:40px;
+        width:80px;
+        background-color: burlywood;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+ </style>
+
+{% endblock %}

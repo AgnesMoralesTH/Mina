@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="{% static '/css/home.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+
+
+        <main>
+            <nav class="navers">
+                <div class="left">
+                    <h2 id="logo">みな</h2>
+        
+                    <div class="japan">
+                        <div class="ball"></div>
+                    </div>
+        
+                </div>
+    
+                <div class="right">
+                    <a href="{% url 'login' %}"><h2> login</h2></a>
+                </div>
+    
+                
+            </nav>
+    
+    
+    
+    
+            
+    
+        </main>
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>

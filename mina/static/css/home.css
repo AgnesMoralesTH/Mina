@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive;
+  }
+  .Philippines{
+    border-radius: 10px;
+    background-color: white;
+    height: 50px;
+    width: 75px;
+    margin-left: 20px;
+    
+    
+  }
+  .bluePH{
+      height:25px;
+      width: 75px;
+      background-color: rgb(40, 40, 194);
+      
+  
+  border-left: 40px solid transparent;
+      
+  }
+  .redPH{
+    height:25px;
+    width: 75px;
+    background-color: rgb(134, 57, 57);
+  }
+  .Thailand{
+    border-radius: 10px;
+    background-color: rgb(134, 57, 57);
+    height: 50px;
+    width: 75px;
+    margin-left: 20px;
+    padding-top: 9px;
+  }
+  .whiteThai{
+      height: 30px;
+      padding-top: 5px;
+      background-color: white;
+  }
+  .bluethai{
+      height: 20px;
+      background-color: rgb(62, 62, 95);
+      
+  }
+.japan{
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    height: 50px;
+    width: 75px;
+    margin-left: 20px;
+}
+.china{
+    border-radius: 10px;
+    background-color: rgb(255, 96, 96);
+    height: 50px;
+    width: 75px;
+    margin-left: 20px;
+}
+.bigStar{
+    margin: 10px 0;
+  position: relative;
+  display: block;
+  color: rgb(248, 255, 149);
+  width: 0px;
+  height: 0px;
+  border-right: 40px solid transparent;
+  border-bottom: 20px solid rgb(248, 255, 149);
+  border-left: 40px solid transparent;
+  transform: rotate(35deg);
+  border-radius: 80%;
+}
+.ball{
+    position: absolute;
+    margin-left: 26px;
+    margin-top:15px;
+    background-color: rgb(155, 84, 84);
+    height:20px;
+    width:20px;
+    
+    border-radius: 50%;
+    
+}
+.navers{
+    display: flex;
+    background-color: royalblue;
+    height: 75px;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+}
+.right{
+    display: flex;
+    float: right;
+    padding-top: 8px;
+    margin-right: 20px;
+}
+.right p{
+    padding-top: 3px;
+    margin-right: 20px;
+    font-size: 26px;
+    font-weight: 500;
+}
+body{
+    background: linear-gradient(to bottom, white, rgb(206, 206, 206),rgb(228, 228, 228));
+}
+#logo{
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.image{
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: salmon;
+}
+.languages{
+    height: 60px;
+    display: flex;
+   margin-top: 30px;
+    padding-top: 5px;
+}
+.books{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px;
+}
+.book{
+    height:200px;
+    width: 250px;
+    background-color:rgb(62, 62, 95);
+    padding: 120px 20px 50px 20px;
+    
+}
+.socialsList{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 50px 50px;
+}
+.socialEX{
+    height:200px;
+    width: 250px;
+    background-color:rgb(101, 101, 161);
+    padding: 120px 20px 50px 20px;
+}
+.divOption{
+    width:50px;
+    height:50px;
+    background-color: blue;
+}
+.catalogueChoices{
+    display:flex;
+}
