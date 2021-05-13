@@ -48,8 +48,8 @@ class RegisterPage(FormView):
 
 class WordDetail(LoginRequiredMixin, DetailView):
     model = Word
-    context_object_name = 'task'
-    template_name = 'base/task.html'
+    context_object_name = 'word'
+    template_name = 'base/word.html'
 
 class WordList(LoginRequiredMixin,ListView):
     model = Word
@@ -79,7 +79,7 @@ class WordCreate(LoginRequiredMixin, CreateView):
             return super(WordCreate, self).form_valid(form)
 
 
-class WordUpdate(LoginRequiredMixin, DetailView):
+class WordUpdate(LoginRequiredMixin, UpdateView):
     model = Word
     fields = ['title', 'description']
     success_url = reverse_lazy('my-words')

@@ -4,15 +4,16 @@
 
 
 
-
+<div class="middleKami">
 
 <div id="search-add-wrapper">
     <form method="GET" style="margin-top: 20px; display: flex;">
-        <input type="text" name="search-area" value="{{search_input}}">
+        <input class="searcher" type="text" name="search-area" value="{{search_input}}">
+        
         <input class="button" type="submit" value="Search">
     </form>
-    <p>Add a Word</p>
-    <a id="add-link" href="{% url 'word-create' %}">&#x2b;</a>
+    
+    <a id="add-link" href="{% url 'word-create' %}">Add a word  &#x2b;</a>
 </div>
 
 
@@ -20,9 +21,9 @@
     {% for myword in mywords %}
         <div>
             
-                <div>
+                <div class="word">
                     
-                        <i><s><a href="{% url 'word-update' myword.id %}">{{myword}}</a></s></i>
+                        <i><a href="{% url 'word-update' myword.id %}">{{myword}}</a></i>
                     
                 </div>
                 
@@ -34,5 +35,45 @@
             <h2>No Items in list</h2>
     {% endfor %}
 </div>
+</div>
+<style>
+    .searcher{
+        height: 50px;
+        width:500px;
+
+        font-family: inherit;
+  
+        border: 0;
+        outline: 0;
+        font-size: 1.3rem;
+        color: white;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+        border-bottom: 2px solid gray;
+    }
+    .word a{
+        text-decoration: none;
+        color:black;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: 'Kiwi Maru', serif;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        color: rgb(172, 172, 172);
+    }
+    .middleKami{
+        width:800px;
+        background-color: aquamarine;
+        margin: 0 auto;
+        padding:25px 25px 25px 25px;
+    }
+</style>
 
 {% endblock %}
+
+
