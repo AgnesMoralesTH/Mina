@@ -3,6 +3,36 @@
 {% block content %}
 
 
-<h1>It works</h1>
+
+
+
+<div id="search-add-wrapper">
+    <form method="GET" style="margin-top: 20px; display: flex;">
+        <input type="text" name="search-area" value="{{search_input}}">
+        <input class="button" type="submit" value="Search">
+    </form>
+    <p>Add a Word</p>
+    <a id="add-link" href="{% url 'word-create' %}">&#x2b;</a>
+</div>
+
+
+<div class="task-items-wrapper">
+    {% for myword in mywords %}
+        <div>
+            
+                <div>
+                    
+                        <i><s><a href="{% url 'word-update' myword.id %}">{{myword}}</a></s></i>
+                    
+                </div>
+                
+                
+            
+        </div>
+
+        {% empty %}
+            <h2>No Items in list</h2>
+    {% endfor %}
+</div>
 
 {% endblock %}

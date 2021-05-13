@@ -24,13 +24,7 @@ class CustomLoginView(LoginView):
 class Newcomers(TemplateView):
     template_name = "base/PageForNewcomers.html"
 
-class CustomLoginView(LoginView):
-    template_name = 'base/login.html'
-    fields = '__all__'
-    redirect_authenticated_user = True
 
-    def get_success_url(self):
-        return reverse_lazy('my-words')
 
 
 class RegisterPage(FormView):
@@ -57,27 +51,25 @@ class WordDetail(LoginRequiredMixin, DetailView):
     context_object_name = 'task'
     template_name = 'base/task.html'
 
-class WordList(ListView):
+class WordList(LoginRequiredMixin,ListView):
     model = Word
-    context_object_name = 'my-words'
-    template_name= 'base/word_list.html'
+    context_object_name = 'mywords'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['my-words'] = context['my-words'].filter(user=self.request.user)
-        context['my-words'] = context['my-words'].filter(complete=False).count()
-
-        search_input = self.request.GET.get('search-area') or ''
-        if search_input: 
-            context['my-words'] = context['my-words'].filter(title__startswith=search_input)
+        context['mywords'] = context['mywords'].filter(user=self.request.user)
         
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['my-words'] = context['my-words'].filter(title__startswith=search_input)
 
-        context['search_input'] = search_input
-
+        context['search_input'] = search_input   
         return context
+    
 
+    
 
-    class WordCreate(LoginRequiredMixin, CreateView):
+class WordCreate(LoginRequiredMixin, CreateView):
         model = Word
         fields = ['title', 'description']
         success_url = reverse_lazy('my-words')
@@ -85,6 +77,12 @@ class WordList(ListView):
         def form_valid(self, form):
             form.instance.user = self.request.user
             return super(WordCreate, self).form_valid(form)
+
+
+class WordUpdate(LoginRequiredMixin, DetailView):
+    model = Word
+    fields = ['title', 'description']
+    success_url = reverse_lazy('my-words')
 
 
     
